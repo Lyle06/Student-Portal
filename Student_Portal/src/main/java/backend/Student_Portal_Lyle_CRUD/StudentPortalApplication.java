@@ -1,4 +1,4 @@
-package Student_Portal_Lyle.Student_Portal;
+package backend.Student_Portal_Lyle_CRUD;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

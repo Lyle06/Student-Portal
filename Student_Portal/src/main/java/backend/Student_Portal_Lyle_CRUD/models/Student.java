@@ -1,4 +1,4 @@
-package Student_Portal_Lyle.models;
+package backend.Student_Portal_Lyle_CRUD.models;
 import javax.persistence.*;
 import javax.persistence.Entity;
 
@@ -11,24 +11,41 @@ public class Student {
     private long student_id;
 
     @Column(nullable=false,unique = true,length = 50)
-    private String student_name;
+    private String student_fname;
+
+    @Column(nullable=false,unique = true,length = 50)
+    private String student_lname;
+
+   
+    @Column(nullable=false,unique = true,length = 80)
     private String student_address;
+    
+    @Column(nullable = false, unique = true, length = 45) 
     private String student_email;
+
+    @Column(nullable = false, unique = true, length = 50) 
     private String student_password;
 
     //getters and setters
-    public String getStudent_id() {
+    public long getStudent_id() {
         return student_id;
     }
-    public void setStudent_id(String student_id) {
+    public void setStudent_id(Long student_id) {
         this.student_id = student_id;
     }
-    public String getStudent_name() {
-        return student_name;
+    public String getStudent_fname() {
+        return student_fname;
     }
-    public void setStudent_name(String student_name) {
-        this.student_name = student_name;
+    public void setStudent_fname(String student_name) {
+        this.student_fname = student_name;
     }
+    public String getStudent_lname() {
+        return student_lname;
+    }
+    public void setStudent_lname(String student_lname) {
+        this.student_lname = student_lname;
+    }
+
     public String getStudent_address() {
         return student_address;
     }
@@ -50,10 +67,11 @@ public class Student {
     //constructors
     public Student(){}
 
-    public Student(String student_id, String student_name, String student_address, String student_email,
+    public Student(long student_id, String student_fname, String student_lname, String student_address, String student_email,
             String student_password) {
         this.student_id = student_id;
-        this.student_name = student_name;
+        this.student_fname = student_fname;
+        this.student_lname = student_lname;
         this.student_address = student_address;
         this.student_email = student_email;
         this.student_password = student_password;
